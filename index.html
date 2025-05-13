@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildanalyse v13 (MVC Refactoring)</title>
+    <script src="https://unpkg.com/konva@9.3.6/konva.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="main-content" id="main-content">
+        <div class="image-display-area">
+            <div id="konva-container1" class="konva-container"></div>
+            <div id="konva-container2" class="konva-container"></div>
+        </div>
+        <div class="controls">
+            <button class="correct-btn" id="correct-btn">Richtig</button>
+            <button class.incorrect-btn" id="incorrect-btn">Falsch</button>
+            <button class="toggle-overlay-btn" id="toggle-overlays-btn">Overlays An/Aus</button>
+            <button id="toggle-highlight-boxes-btn">Hinweisboxen An/Aus</button>
+            <button class="toggle-parallel-btn" id="toggle-parallel-btn">Parallelmodus</button>
+            <div class="score-display" id="anomaly-score">Score: 0.00</div>
+            <div class="label-display" id="anomaly-label">Label</div>
+        </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button id="sidebar-toggle-btn" title="Sidebar umschalten">&raquo;</button>
+            <h3>Bildpaare</h3>
+        </div>
+        <ul id="image-pair-navbar"></ul>
+    </div>
+
+    <div id="zoom-modal" tabindex="-1">
+        <div id="zoom-modal-content">
+            <div id="zoom-main-container">
+                <div id="zoom-konva-container"></div>
+                <div id="zoom-konva-sidebar-container">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
